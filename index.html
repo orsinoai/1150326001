@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>母親節賽跑遊戲</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <header>
+      <h1>母親節快樂！</h1>
+      <p>和媽媽一起參加這場溫馨賽跑，用愛心加速到終點。</p>
+    </header>
+
+    <section class="game-panel">
+      <div class="track">
+        <div class="finish-line">終點</div>
+        <div id="runner1" class="runner runner-mom">媽媽</div>
+        <div id="runner2" class="runner runner-child">孩子</div>
+      </div>
+
+      <div class="controls">
+        <button id="boostBtn" type="button">發射愛心加速</button>
+        <button id="resetBtn" type="button">重新開始</button>
+      </div>
+
+      <div class="status">
+        <p id="message">準備好了嗎？點擊「發射愛心加速」開始比賽！</p>
+        <div class="progress">
+          <span>媽媽進度：</span><span id="progress1">0%</span>
+        </div>
+        <div class="progress">
+          <span>孩子進度：</span><span id="progress2">0%</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tips">
+      <h2>遊戲玩法</h2>
+      <ul>
+        <li>按「發射愛心加速」可以讓媽媽或孩子更快前進。</li>
+        <li>每次加速都會注入一點母親節祝福。</li>
+        <li>到終點的人會獲得溫暖的勝利訊息。</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

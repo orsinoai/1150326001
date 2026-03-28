@@ -1,0 +1,193 @@
+:root {
+  --bg: #fff3f6;
+  --card: #ffffff;
+  --primary: #f25a7c;
+  --secondary: #ffb3c6;
+  --track: #f8e7ef;
+  --text: #4a2f40;
+  --shadow: rgba(150, 55, 95, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, #ffe5ec 0%, #fff8fb 100%);
+  color: var(--text);
+}
+
+.page-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  letter-spacing: 0.06em;
+}
+
+header p {
+  margin: 14px auto 0;
+  max-width: 680px;
+  font-size: 1.05rem;
+  color: #6f4b63;
+}
+
+.game-panel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ffd9e4;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px var(--shadow);
+  padding: 28px;
+}
+
+.track {
+  position: relative;
+  background: repeating-linear-gradient(180deg, #fff1f6 0, #fff1f6 60px, #ffe5ec 60px, #ffe5ec 120px);
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.track::before {
+  content: "母親節加油站";
+  position: absolute;
+  left: 18px;
+  top: 14px;
+  font-size: 0.95rem;
+  color: #a55a78;
+  opacity: 0.7;
+}
+
+.finish-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, #ffd9e1 100%);
+  border-left: 4px dashed var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.runner {
+  position: absolute;
+  left: 16px;
+  width: 140px;
+  padding: 16px;
+  border-radius: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(255, 128, 165, 0.24);
+}
+
+.runner-mom {
+  top: 50px;
+  background: linear-gradient(135deg, #ff8aa1 0%, #ff5b8a 100%);
+}
+
+.runner-child {
+  top: 170px;
+  background: linear-gradient(135deg, #ffca9b 0%, #ff8e7a 100%);
+}
+
+.controls {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 24px 0 14px;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(255, 90, 122, 0.18);
+}
+
+#boostBtn {
+  background: var(--primary);
+  color: #fff;
+}
+
+#resetBtn {
+  background: #ffffff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.status {
+  text-align: center;
+}
+
+.status p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #7a4c61;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: #8c5d74;
+}
+
+.tips {
+  margin-top: 32px;
+  padding: 24px 20px;
+  background: #fff0f5;
+  border: 1px solid #ffdce4;
+  border-radius: 20px;
+}
+
+.tips h2 {
+  margin-top: 0;
+}
+
+.tips ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.tips li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 640px) {
+  .runner {
+    width: 120px;
+    left: 12px;
+    padding: 12px;
+  }
+
+  .track {
+    min-height: 280px;
+  }
+}
